@@ -1,228 +1,223 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunnu Stone | Монголын хөдөлгөөнт шийдэл</title>
 
-<title>Hunnu Stone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f8fb;
+      color: #1a1a1a;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#ffffff;
-  color:#111827;
-}
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 28px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      z-index: 1000;
+    }
 
-/* NAV - 深色仅用于头部 */
-/* NAV - 白底企业风 + 阴影 */
-.nav{
-  background:#ffffff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:16px 28px;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  border-bottom:1px solid #e5e7eb;
-}
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
 
-/* LOGO */
-.logo{
-  font-weight:bold;
-  color:#0f172a;
-  font-size:16px;
-  letter-spacing:0.5px;
-}
+    .nav a {
+      margin-left: 18px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
 
-/* MENU */
-.menu a{
-  margin-left:18px;
-  text-decoration:none;
-  color:#374151;
-  font-size:14px;
-}
+    .nav a:hover {
+      color: #000;
+      font-weight: bold;
+    }
 
-.menu a:hover{
-  color:#374151;
-  font-weight:500;
-}
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1f2937);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-/* HERO - 关键深色区域 */
-.hero{
-  background:linear-gradient(135deg,#0f172a,#1e3a8a);
-  color:white;
-  text-align:center;
-  padding:100px 20px;
-}
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
 
-.hero h1{
-  font-size:46px;
-  margin:0;
-}
+    .hero p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
 
-.hero p{
-  color:#cbd5e1;
-}
+    /* SECTION */
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
 
-/* SECTION */
-.section{
-  max-width:1100px;
-  margin:auto;
-  padding:70px 20px;
-}
+    .title {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
 
-.title{
-  font-size:26px;
-  margin-bottom:10px;
-  color:#111827;
-}
+    .sub {
+      color: #666;
+      margin-bottom: 25px;
+    }
 
-.sub{
-  color:#6b7280;
-  margin-bottom:25px;
-}
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
 
-/* CARD - 白底 + 轻边框 */
-.card{
-  background:#ffffff;
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.04);
-}
+    /* FINANCE */
+    .finance {
+      background: #111827;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
 
-.card img{
-  width:100%;
-  border-radius:10px;
-  margin-bottom:10px;
-}
+    .finance ul {
+      list-style: none;
+      padding: 0;
+    }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 14px;
-  background:#1e3a8a;
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
-}
+    .finance li {
+      margin: 10px 0;
+      opacity: 0.9;
+    }
 
-/* FINANCE - 深色强调模块（重点区域） */
-.finance{
-  background:#0f172a;
-  color:white;
-  padding:70px 20px;
-  text-align:center;
-}
+    /* FOOTER */
+    .footer {
+      background: #fff;
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 14px;
+    }
 
-.finance ul{
-  list-style:none;
-  padding:0;
-  color:#cbd5e1;
-}
-
-.finance li{
-  margin:10px 0;
-}
-
-/* FOOTER */
-.footer{
-  background:#f3f4f6;
-  text-align:center;
-  padding:50px 20px;
-  color:#6b7280;
-  border-top:1px solid #e5e7eb;
-}
-
-.footer a{
-  color:#1e3a8a;
-  text-decoration:none;
-}
-</style>
+    a {
+      color: #2563eb;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAV（唯一深色结构） -->
+<!-- NAV -->
 <div class="nav">
-  <div>HUNNU STONE</div>
+  <div class="logo">HUNNU STONE</div>
   <div>
-    <a href="index.html">Нүүр</a>
-    <a href="products.html">Бүтээгдэхүүн</a>
-    <a href="applications.html">Хэрэглээ</a>
-    <a href="finance.html">Санхүүжилт</a>
+    <a href="#home">Нүүр</a>
+    <a href="#about">Бидний тухай</a>
+    <a href="#product">Бүтээгдэхүүн</a>
+    <a href="#scene">Хэрэглээ</a>
+    <a href="#finance">Санхүүжилт</a>
+    <a href="#contact">Холбоо</a>
   </div>
 </div>
 
-<!-- HERO（品牌关键区） -->
-<div class="hero">
+<!-- HERO -->
+<div class="hero" id="home">
   <h1>HUNNU STONE</h1>
   <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
+  <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="title">Бидний тухай</div>
+  <div class="sub">Найдвартай, урт хугацааны түншлэл бүхий компани</div>
+  <p>
+    Hunnu Stone нь Монголын зах зээлд зориулсан тээврийн хэрэгсэл болон аж ахуйн тоног төхөөрөмж нийлүүлэгч компани юм.
+    Бидний зорилго бол хөдөө болон хотын хэрэглээнд тохирсон найдвартай шийдлийг хүргэх юм.
+  </p>
 </div>
 
 <!-- PRODUCTS -->
-<div class="section">
-
+<div class="section" id="product">
   <div class="title">Бүтээгдэхүүн</div>
-  <div class="sub">5–15 жилийн ашиглалтын хугацаатай найдвартай техник</div>
+  <div class="sub">5–15 жилийн ашиглалтын хугацаатай, өргөн хэрэглээний техникүүд</div>
 
   <div class="grid">
-
     <div class="card">
-      <img src="images/electric.jpg">
       <h3>Цахилгаан гурван дугуйт</h3>
+      <p>Хот болон хөдөө ашиглахад тохиромжтой, бага зардалтай тээвэр.</p>
       <p>Үнэ: 2,500 – 8,000 USD</p>
-      <a class="btn" href="products/electric.html">Дэлгэрэнгүй</a>
     </div>
 
     <div class="card">
-      <img src="images/gas.jpg">
       <h3>Шатахуунт гурван дугуйт</h3>
+      <p>Хүнд ачаа болон хол зайд зориулагдсан хүчтэй тээвэр.</p>
       <p>Үнэ: 3,000 – 10,000 USD</p>
-      <a class="btn" href="products/gas.html">Дэлгэрэнгүй</a>
     </div>
 
     <div class="card">
-      <img src="images/agri.jpg">
       <h3>Аж ахуйн техник</h3>
+      <p>Хөдөө аж ахуй, жижиг бизнесийн зориулалттай тоног төхөөрөмж.</p>
       <p>Үнэ: 2,500 – 20,000 USD</p>
-      <a class="btn" href="products/agri.html">Дэлгэрэнгүй</a>
     </div>
-
   </div>
 </div>
 
-<!-- FINANCE（关键转化模块） -->
-<div class="finance">
-  <h2>Санхүүжилтийн хамтын ажиллагаа</h2>
-  <p>Монголд тээврийн хэрэгслийн лизингийн эрэлт тогтмол өсч байна.</p>
+<!-- SCENARIOS -->
+<div class="section" id="scene">
+  <div class="title">Хэрэглээний салбар</div>
+  <div class="sub">Бодит хэрэглээнд суурилсан шийдлүүд</div>
 
-  <ul>
-    <li>Сарын борлуулалт: 15–30+ нэгж</li>
-    <li>Өндөр хэрэглэгчийн эрэлт</li>
-    <li>5–15 жилийн ашиглалтын хугацаа</li>
-    <li>Дахин борлуулалтын үнэ тогтвортой</li>
-  </ul>
+  <div class="grid">
+    <div class="card">🏗 Барилгын талбайн тээвэр</div>
+    <div class="card">🐎 Мал аж ахуй, хөдөө орон нутаг</div>
+    <div class="card">📦 Жижиг бизнес, хүргэлт үйлчилгээ</div>
+    <div class="card">🌾 Хөдөө аж ахуйн үйлдвэрлэл</div>
+  </div>
 </div>
 
-<!-- FOOTER（统一页尾） -->
-<div class="footer">
-  <p><b>Hunnu Stone</b></p>
+<!-- FINANCE -->
+<div class="finance" id="finance">
+  <h2>Санхүүжилт & Лизинг</h2>
+
+  <p>Монголд тээврийн хэрэгслийн зээлийн эрэлт тогтмол өсч байна.</p>
+
+  <ul>
+    <li>Сарын борлуулалтын потенциал: 15–30+ нэгж</li>
+    <li>Хэрэглэгчийн өндөр эрэлт</li>
+    <li>Бүтээгдэхүүний ашиглалтын хугацаа: 5–15 жил</li>
+    <li>Дахин борлуулалтын үнэ тогтвортой</li>
+  </ul>
+
+  <p>Бид санхүүгийн байгууллагуудтай урт хугацааны хамтын ажиллагаа хөгжүүлэхэд нээлттэй.</p>
+</div>
+
+<!-- CONTACT -->
+<div class="footer" id="contact">
+  <h2>Холбоо барих</h2>
   <p>📞 94577757</p>
-  <p>📍 Ulaanbaatar, Mongolia</p>
   <p>Facebook: <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a></p>
-  <p>© 2026 Hunnu Stone. All rights reserved.</p>
+  <p>hunnustone.com</p>
 </div>
 
 </body>
