@@ -134,13 +134,43 @@
     .card {
       background: white;
       border-radius: 12px;
-      padding: 22px;
+      overflow: hidden;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
       display: block;
       color: #111827;
-      /* 保持文字颜色 */
       text-decoration: none;
-      /* 去掉下划线 */
+    }
+
+    /* 产品卡片：图片占满上半区，顶部与卡片一体圆角，下方直角接文字 */
+    .card:has(> img) {
+      padding: 0;
+    }
+
+    .card:has(> img) img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .card:has(> img) h3 {
+      margin: 0;
+      padding: 18px 22px 8px;
+      font-size: 18px;
+    }
+
+    .card:has(> img) p {
+      margin: 0;
+      padding: 0 22px 22px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* 纯文字卡片（应用场景区） */
+    .card:not(:has(> img)) {
+      padding: 22px;
     }
 
     /* FINANCE */
@@ -163,9 +193,9 @@
 
     /* FOOTER */
     .footer {
-      background:#f8fafc;
-      padding: 50px 20px;
-      border-top: 1px solid #e5e7eb;
+      background:#ffffff;
+      padding: 20px 20px;
+      border-top: 2px solid #e3e3e4;
       text-align: center;
     }
 
@@ -250,6 +280,7 @@
         <div class="card">
           <img src="images/electric.jpg">
           <h3>Цахилгаан гурван дугуйт</h3>
+          <p>Хот болон хөдөө ашиглахад тохиромжтой, бага зардалтай тээвэр.</p>
           <p>Үнэ: 2,500 – 8,000 USD</p>
         </div>
       </a>
@@ -257,6 +288,7 @@
         <div class="card">
           <img src="images/gas.jpg">
           <h3>Шатахуунт гурван дугуйт</h3>
+          <p>Хүнд ачаа болон хол зайд зориулагдсан хүчтэй тээвэр.</p>
           <p>Үнэ: 3,000 – 10,000 USD</p>
         </div>
       </a>
@@ -264,6 +296,7 @@
         <div class="card">
           <img src="images/agri.jpg">
           <h3>Аж ахуйн техник</h3>
+          <p>Хөдөө аж ахуй, жижиг бизнесийн зориулалттай тоног төхөөрөмж.</p>
           <p>Үнэ: 2,500 – 20,000 USD</p>
         </div>
       </a>
@@ -284,8 +317,8 @@
   </div>
 
   <!-- FINANCE -->
-  <div class="finance" id="finance">
-    <h2>Санхүүжилт & Лизинг</h2>
+  <!-- <div class="finance" id="finance">
+     <h2>Санхүүжилт & Лизинг</h2>
 
     <p>Монголд тээврийн хэрэгслийн зээлийн эрэлт тогтмол өсч байна.</p>
 
@@ -297,7 +330,7 @@
     </ul>
 
     <p>Бид санхүүгийн байгууллагуудтай урт хугацааны хамтын ажиллагаа хөгжүүлэхэд нээлттэй.</p>
-  </div>
+  </div> -->
 
   <!-- CONTACT -->
   <div class="footer" id="contact">
@@ -305,7 +338,7 @@
     <h3>Холбоо барих</h3>
 
     <div class="footer-info">
-      <p>📞 94577757</p>
+      <!-- <p>📞 94577757</p> -->
 
       <p>📘 Facebook:
         <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a>
