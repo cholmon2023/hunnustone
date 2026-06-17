@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hunnu Stone | Монголын хөдөлгөөнт шийдэл</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <style>
     body {
@@ -22,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 28px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
       z-index: 1000;
     }
 
@@ -30,6 +32,15 @@
       font-weight: bold;
       font-size: 18px;
       letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      /* 垂直居中 */
+      gap: 10px;
+      /* 图片和文字间距 */
+    }
+
+    .logo img {
+      height: 40px;
     }
 
     .nav a {
@@ -90,7 +101,12 @@
       background: white;
       border-radius: 12px;
       padding: 22px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      display: block;
+      color: #111827;
+      /* 保持文字颜色 */
+      text-decoration: none;
+      /* 去掉下划线 */
     }
 
     /* FINANCE */
@@ -127,98 +143,107 @@
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="logo">HUNNU STONE</div>
-  <div>
-    <a href="#home">Нүүр</a>
-    <a href="#about">Бидний тухай</a>
-    <a href="#product">Бүтээгдэхүүн</a>
-    <a href="#scene">Хэрэглээ</a>
-    <a href="#finance">Санхүүжилт</a>
-    <a href="#contact">Холбоо</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<div class="hero" id="home">
-  <h1>HUNNU STONE</h1>
-  <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
-  <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
-</div>
-
-<!-- ABOUT -->
-<div class="section" id="about">
-  <div class="title">Бидний тухай</div>
-  <div class="sub">Найдвартай, урт хугацааны түншлэл бүхий компани</div>
-  <p>
-    Hunnu Stone нь Монголын зах зээлд зориулсан тээврийн хэрэгсэл болон аж ахуйн тоног төхөөрөмж нийлүүлэгч компани юм.
-    Бидний зорилго бол хөдөө болон хотын хэрэглээнд тохирсон найдвартай шийдлийг хүргэх юм.
-  </p>
-</div>
-
-<!-- PRODUCTS -->
-<div class="section" id="product">
-  <div class="title">Бүтээгдэхүүн</div>
-  <div class="sub">5–15 жилийн ашиглалтын хугацаатай, өргөн хэрэглээний техникүүд</div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Цахилгаан гурван дугуйт</h3>
-      <p>Хот болон хөдөө ашиглахад тохиромжтой, бага зардалтай тээвэр.</p>
-      <p>Үнэ: 2,500 – 8,000 USD</p>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">
+      <img src="assets/logo.png" alt="logo" style="height:40px;">
+      HUNNU STONE
     </div>
-
-    <div class="card">
-      <h3>Шатахуунт гурван дугуйт</h3>
-      <p>Хүнд ачаа болон хол зайд зориулагдсан хүчтэй тээвэр.</p>
-      <p>Үнэ: 3,000 – 10,000 USD</p>
-    </div>
-
-    <div class="card">
-      <h3>Аж ахуйн техник</h3>
-      <p>Хөдөө аж ахуй, жижиг бизнесийн зориулалттай тоног төхөөрөмж.</p>
-      <p>Үнэ: 2,500 – 20,000 USD</p>
+    <div>
+      <a href="#home">Нүүр</a>
+      <a href="#about">Бидний тухай</a>
+      <a href="#product">Бүтээгдэхүүн</a>
+      <a href="#scene">Хэрэглээ</a>
+      <a href="#finance">Санхүүжилт</a>
+      <a href="#contact">Холбоо</a>
     </div>
   </div>
-</div>
 
-<!-- SCENARIOS -->
-<div class="section" id="scene">
-  <div class="title">Хэрэглээний салбар</div>
-  <div class="sub">Бодит хэрэглээнд суурилсан шийдлүүд</div>
-
-  <div class="grid">
-    <div class="card">🏗 Барилгын талбайн тээвэр</div>
-    <div class="card">🐎 Мал аж ахуй, хөдөө орон нутаг</div>
-    <div class="card">📦 Жижиг бизнес, хүргэлт үйлчилгээ</div>
-    <div class="card">🌾 Хөдөө аж ахуйн үйлдвэрлэл</div>
+  <!-- HERO -->
+  <div class="hero" id="home">
+    <h1>HUNNU STONE</h1>
+    <p>Монголын хөдөлгөөнт ба үйлдвэрлэлийн шийдэл</p>
+    <p>Цахилгаан тээвэр • Шатахуунт тээвэр • Аж ахуйн техник</p>
   </div>
-</div>
 
-<!-- FINANCE -->
-<div class="finance" id="finance">
-  <h2>Санхүүжилт & Лизинг</h2>
+  <!-- ABOUT -->
+  <div class="section" id="about">
+    <div class="title">Бидний тухай</div>
+    <div class="sub">Найдвартай, урт хугацааны түншлэл бүхий компани</div>
+    <p>
+      Hunnu Stone нь Монголын зах зээлд зориулсан тээврийн хэрэгсэл болон аж ахуйн тоног төхөөрөмж нийлүүлэгч компани
+      юм.
+      Бидний зорилго бол хөдөө болон хотын хэрэглээнд тохирсон найдвартай шийдлийг хүргэх юм.
+    </p>
+  </div>
 
-  <p>Монголд тээврийн хэрэгслийн зээлийн эрэлт тогтмол өсч байна.</p>
+  <!-- PRODUCTS -->
+  <div class="section" id="product">
+    <div class="title">Бүтээгдэхүүн</div>
+    <div class="sub">5–15 жилийн ашиглалтын хугацаатай, өргөн хэрэглээний техникүүд</div>
 
-  <ul>
-    <li>Сарын борлуулалтын потенциал: 15–30+ нэгж</li>
-    <li>Хэрэглэгчийн өндөр эрэлт</li>
-    <li>Бүтээгдэхүүний ашиглалтын хугацаа: 5–15 жил</li>
-    <li>Дахин борлуулалтын үнэ тогтвортой</li>
-  </ul>
+    <div class="grid">
+      <a href="products/electric.html" style="text-decoration:none;">
+        <div class="card">
+          <img src="images/electric.jpg">
+          <h3>Цахилгаан гурван дугуйт</h3>
+          <p>Үнэ: 2,500 – 8,000 USD</p>
+        </div>
+      </a>
+      <a href="products/gas.html" style="text-decoration:none;">
+        <div class="card">
+          <img src="images/gas.jpg">
+          <h3>Шатахуунт гурван дугуйт</h3>
+          <p>Үнэ: 3,000 – 10,000 USD</p>
+        </div>
+      </a>
+      <a href="products/agri.html" style="text-decoration:none;">
+        <div class="card">
+          <img src="images/agri.jpg">
+          <h3>Аж ахуйн техник</h3>
+          <p>Үнэ: 2,500 – 20,000 USD</p>
+        </div>
+      </a>
+    </div>
+  </div>
 
-  <p>Бид санхүүгийн байгууллагуудтай урт хугацааны хамтын ажиллагаа хөгжүүлэхэд нээлттэй.</p>
-</div>
+  <!-- SCENARIOS -->
+  <div class="section" id="scene">
+    <div class="title">Хэрэглээний салбар</div>
+    <div class="sub">Бодит хэрэглээнд суурилсан шийдлүүд</div>
 
-<!-- CONTACT -->
-<div class="footer" id="contact">
-  <h2>Холбоо барих</h2>
-  <p>📞 94577757</p>
-  <p>Facebook: <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a></p>
-  <p>hunnustone.com</p>
-</div>
+    <div class="grid">
+      <div class="card">🏗 Барилгын талбайн тээвэр</div>
+      <div class="card">🐎 Мал аж ахуй, хөдөө орон нутаг</div>
+      <div class="card">📦 Жижиг бизнес, хүргэлт үйлчилгээ</div>
+      <div class="card">🌾 Хөдөө аж ахуйн үйлдвэрлэл</div>
+    </div>
+  </div>
+
+  <!-- FINANCE -->
+  <div class="finance" id="finance">
+    <h2>Санхүүжилт & Лизинг</h2>
+
+    <p>Монголд тээврийн хэрэгслийн зээлийн эрэлт тогтмол өсч байна.</p>
+
+    <ul>
+      <li>Сарын борлуулалтын потенциал: 15–30+ нэгж</li>
+      <li>Хэрэглэгчийн өндөр эрэлт</li>
+      <li>Бүтээгдэхүүний ашиглалтын хугацаа: 5–15 жил</li>
+      <li>Дахин борлуулалтын үнэ тогтвортой</li>
+    </ul>
+
+    <p>Бид санхүүгийн байгууллагуудтай урт хугацааны хамтын ажиллагаа хөгжүүлэхэд нээлттэй.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="footer" id="contact">
+    <h2>Холбоо барих</h2>
+    <p>📞 94577757</p>
+    <p>Facebook: <a href="https://www.facebook.com/HunnuStone">Hunnu Stone</a></p>
+    <p>hunnustone.com</p>
+  </div>
 
 </body>
+
 </html>
